@@ -1,0 +1,38 @@
+/*--------------------cards----------------------*/
+.cards {}
+.cards__content {
+	 @include flex-cols-gap(16, 16, 3, ($md: 2, $xs: 1), 'card', 1);
+}
+.card {
+	padding: rem(29) rem(24) rem(24) rem(24);
+	display: flex;
+	flex-direction: column;
+	@extend .border;
+}
+.card__top {
+	flex: 0 0 auto;
+	display: flex;
+	justify-content: space-between;
+	column-gap: rem(16);
+	padding-bottom: rem(21);
+}
+.card__total {
+	font-size: rem(32);
+	font-family: $bold;
+}
+.card__wallet {
+	font-size: rem(36);
+	color: #929DA8;
+}
+.card__body {
+	flex: 1 1 auto;
+	padding-bottom: rem(16);
+}
+.card__text {}
+.card__bottom {
+	flex: 0 0 auto;
+	margin-top: auto;
+	text-align: right;
+}
+.btn {}
+/*--------------------END cards----------------------*/ 

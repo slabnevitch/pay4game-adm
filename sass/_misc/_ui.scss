@@ -1,8 +1,8 @@
 /*--------------------ui----------------------*/
 h1{
-  margin-bottom: rem(24);
+  margin-bottom: rem(48);
   font-family: $bold;
-  font-size: rem(40);
+  font-size: rem(32);
 }
 h2{
   margin-bottom: rem(24);
@@ -27,6 +27,10 @@ h2{
   @include max-screen($xss){
     max-width: rem(260);
   }
+}
+.border{
+  border-radius: rem(40) 0 rem(40) 0;
+  border: rem(1) solid $accent;
 }
 .btn{
 

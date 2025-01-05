@@ -186,6 +186,10 @@ body{
 .icon-trans {}
 .icon-profile {}
 .icon-setts {}
+
+.page{
+	padding: rem(48) rem(26) rem(48) rem(22);
+}
 // компенсация ширины скроллбара при появлении ванильных поапов
 // все содержимое страницы оборачивается в #wrapper-for-scroll-fix
 // использовать совместно с libs-vanilla/service-functions/scrollWidth.js 
