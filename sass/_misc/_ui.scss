@@ -1,0 +1,138 @@
+/*--------------------ui----------------------*/
+h1{
+  margin-bottom: rem(24);
+  font-family: $bold;
+  font-size: rem(40);
+}
+h2{
+  margin-bottom: rem(24);
+  font-family: $bold;
+  font-size: rem(32);
+  color: $accent;
+}
+.sect-top {
+  margin-bottom: rem(48);
+  text-align: center;
+}
+.sect-note {
+  max-width: rem(550);
+  margin-left: auto;
+  margin-right: auto;
+  font-family: $med;
+
+  @include max-screen($sm){
+    font-family: $reg;
+  }
+
+  @include max-screen($xss){
+    max-width: rem(260);
+  }
+}
+.btn{
+
+  @include but-null;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: rem(55);
+  flex-shrink: 0;
+  border: none;
+  color: #0B0D0B;
+  text-decoration: none;
+  background-color: $accent;
+  padding: rem(5) rem(32) rem(10) rem(32);
+  font-size: rem(20);
+  font-family: $light;
+  line-height: 1;
+  border-radius: rem(40) 0 rem(40) 0;
+  text-align: center;
+  position: relative;
+  outline: none;
+  transition: background-color .1s ease;
+	
+  // &:hover{
+  //    background-color: lighten($accent, 5%);
+  // }
+
+@media (any-hover: hover) { //только для устройств с ховером
+		cursor: pointer;
+		&:hover{
+   	 		background-color: lighten($accent, 5%);
+
+		}
+	}
+//   &:active{
+//    background-color: darken($accent, 5%);
+//   }
+  
+//   &-fw{
+//    width: 100%;
+//   }
+   
+}
+
+.toggle-mnu{
+	position: relative;
+	// right: rem(30);
+	// top: rem(15);
+  display: none;
+  width: rem(36);
+  height: rem(24);
+  // margin-top: rem(14);
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  z-index: 4;
+
+  span:after, span:before{
+
+    content: "";
+    position: absolute;
+    left: 0;
+    top: rem(10);
+  } 
+
+  span:after{
+
+    top: rem(20);
+  }
+
+  span{
+
+    position: absolute;
+    top: 0;
+    display: block;
+  } 
+
+  span, span:after, span:before{
+
+    width: 100%;
+    height: rem(4);
+    background-color: #fff;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+
+  }
+
+
+  &.on span{
+
+    background-color: transparent;
+  } 
+
+  &.on span:before{
+
+    transform: rotate(45deg) translate(rem(-1), 0);
+  } 
+
+  &.on span:after{
+
+    transform: rotate(-45deg) translate(rem(6), rem(-7));
+  } 
+
+  @include max-screen($sm){
+  	display: block;
+  }
+} 
+
+/*--------------------END ui----------------------*/ 
