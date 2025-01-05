@@ -55,12 +55,18 @@
           <div class="security-header__icon"></div>
           <div class="security-header__text">2FA</div>
         </div>
-        <div class="header__actions actions-header">
-          <div class="actions-header__item item-actions-header">
-            <div class="item-actions-header__icon"></div>
-            <div class="item-actions-header__money">5 100.02 </div>
-          </div><a href="#" class="actions-header__item item-actions-header">
-            <div class="item-actions-header__icon"></div>
+        <div class="header__actions actions-header"><a href="#" class="actions-header__item item-actions-header">
+            <div class="item-actions-header__icon">
+                  <svg class="icon icon-ruble ">
+                    <use xlink:href="img/icons-svg/svg-sprite.svg#ruble"></use>
+                  </svg>
+            </div>
+            <div class="item-actions-header__money">5 100.02 </div></a><a href="#" class="actions-header__item item-actions-header">
+            <div class="item-actions-header__icon">
+                  <svg class="icon icon-profile ">
+                    <use xlink:href="img/icons-svg/svg-sprite.svg#profile"></use>
+                  </svg>
+            </div>
             <div class="item-actions-header__val">Ресселер тест</div></a>
           <button type="button" class="actions-header__item item-actions-header">
             <div class="item-actions-header__icon"></div>
@@ -77,11 +83,12 @@
         <div class="footer__copyright">Pay2Game 2024</div>
         <div class="footer__version">Version 1.0</div>
       </footer>
-    </main>
+    </main><img src="img/ellipse.svg" alt="alt" class="ellipse">
     
     
+    <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
     
     
-    <script src="js/main.min.js"></script>
+    <script src="js/common.min.js"></script>
   </body>
 </html>

@@ -5,6 +5,15 @@
 	justify-content: space-between;
 	align-items: center;
 	column-gap: rem(16);
+
+	@include max-screen($sm){
+		padding-right: rem(16);
+	}
+	@include max-screen(em(700)){
+		flex-direction: column;
+		row-gap: rem(24);
+		align-items: flex-start;
+	}
 }
 .header__security {
 	display: flex;
@@ -18,6 +27,15 @@
 .header__actions {
 	display: flex;
 	column-gap: rem(24);
+
+	@include max-screen(em(700)){
+		max-width: calc(100% + rem(16));
+		overflow: auto;
+		position: relative;
+		padding-right: rem(16);
+		// right: rem(-16);
+		// margin-left: rem(-16);
+	}
 }
 .actions-header {}
 .actions-header__item {
@@ -26,6 +44,7 @@
 	align-items: center;
 	column-gap: rem(12);
 	padding: rem(10) rem(24) rem(12) rem(28);
+	flex-shrink: 0;
 	border-radius: rem(40);
 	@include vertical-grad(#213953, #1B2D41);
 	text-decoration: none;

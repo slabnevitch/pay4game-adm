@@ -81,6 +81,14 @@
 
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
+
+		document.onclick = function(e) {
+			var targ = e.target;
+
+			if(targ.closest('.sidebar__burger') !== null){
+				document.documentElement.classList.toggle('sidebar-folded');
+			}
+		}
 		
-		});
+	});
 })();

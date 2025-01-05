@@ -31,6 +31,21 @@ body{
 		overflow-behavior: none;
 	}
 }
+.ellipse{
+	@include absolute-center;
+	max-width: none;
+	max-height: none;
+	transform: translate(-50%, 0);
+	position: fixed;
+	width: rem(1584);
+	height: rem(1584);
+	z-index: -1;
+	top: auto;
+	bottom: rem(-1044);
+	// left: 0;
+	// right: 0;
+	margin: auto;
+}
 .sidebar{
 	display: flex;
 	flex-direction: column;
@@ -42,6 +57,10 @@ body{
 	width: rem(300);
 	background-color: $acc-dark;
 	transition: all .2s;
+
+	.sidebar-folded &{
+		width: rem(62);
+	}
 }
 .sidebar__top {
 	flex: 0 0 auto;
@@ -49,6 +68,12 @@ body{
 	align-items: center;
 	column-gap: rem(16);
 	padding: rem(16) rem(16) rem(20) rem(48);
+	transition: all .2s;
+
+	.sidebar-folded &{
+		padding-left: rem(9);
+		padding-right: rem(9);
+	}
 }
 .sidebar__body{
 	flex: 1 1 auto;
@@ -62,11 +87,18 @@ body{
 	align-items: center;
 	justify-content: center;
 	flex-shrink: 0;
+
+	.icon-burger {
+		width: rem(18);
+	}
 }
 .icon {}
-.icon-burger {}
 .sidebar__logo {
 	width: 121px;
+
+	.sidebar-folded &{
+		display: none;
+	}
 
 	img{
 		display: block;
@@ -95,9 +127,16 @@ body{
 	align-items: center;
 	// flex-direction: row-reverse;
 	column-gap: rem(11);
-	padding: rem(18) rem(18) rem(18) rem(50);
+	padding: rem(5) rem(18) rem(5) rem(50);
+	min-height: rem(56);
 	font-family: $med;
 	text-decoration: none;
+	transition: all .2s;
+
+	.sidebar-folded &{
+		padding-left: rem(20.5);
+		padding-right: rem(20.5);
+	}
 
 	&:before{
 		content: '';
@@ -126,9 +165,9 @@ body{
 	// .icon{
 	// 	font-size: rem(20);
 	// }
-	// .icon-payments {
-	// 	font-size: rem(16);
-	// }
+	.icon-payments {
+		font-size: rem(16);
+	}
 }
 .menu__icon{
 	flex-shrink: 0;
@@ -137,6 +176,12 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+.menu__value{
+
+	.sidebar-folded &{
+		display: none;
+	}
 }
 .icon-trans {}
 .icon-profile {}
@@ -178,6 +223,10 @@ html, body{
 	min-height: 100%;
 	overflow: hidden;
 	transition: padding-left .2s;
+
+	.sidebar-folded &{
+		padding-left: rem(62);
+	}
 
 	@supports(overflow: clip){
 		overflow: clip;

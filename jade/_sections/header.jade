@@ -4,12 +4,14 @@ header.header
 		.security-header__text 2FA
 
 	.header__actions.actions-header
-		.actions-header__item.item-actions-header
+		a(href="#").actions-header__item.item-actions-header
 			.item-actions-header__icon
+				+icon('ruble')
 			.item-actions-header__money 5 100.02 
 
 		a(href="#").actions-header__item.item-actions-header
 			.item-actions-header__icon
+				+icon('profile')
 			.item-actions-header__val Ресселер тест
 
 		button(type="button").actions-header__item.item-actions-header

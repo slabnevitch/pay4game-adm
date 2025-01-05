@@ -35,6 +35,8 @@ html(lang='ru')
 
 		//- footer-to-bottom--------------------
 		include ../_misc/_footer-to-bottom
+
+		img.ellipse(src="img/ellipse.svg" alt="alt")
 		
 		//- при использовании _body-html-for-slideout или _footer-to-bottom  -- закомментировать:
 		//- include ../_sections/header
@@ -49,10 +51,10 @@ html(lang='ru')
 		block page-scripts
 		
 		//- УДАЛИТЬ если в gulpfile.js buildMode = 'webpack'
-		//- script(src='js/common.min.js')
+		script(src='js/common.min.js')
 		
 
 		//- если в gulpfile.js buildMode = 'webpack'
-		script(src='js/main.min.js')
+		//- script(src='js/main.min.js')
 		
 		//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_NAmCu9dm16a9i0oeX0T6rBQFgObeiZA&amp;callback=initMap" async defer>)
