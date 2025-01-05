@@ -19,41 +19,54 @@
   </head>
   <body>
     <aside class="sidebar">
-      <div class="sidebar__top">
+      <header class="sidebar__top">
         <button type="button" class="sidebar__burger">
               <svg class="icon icon-burger ">
                 <use xlink:href="img/icons-svg/svg-sprite.svg#burger"></use>
               </svg>
         </button><a href="#" class="sidebar__logo"><img src="img/logo.svg" alt="alt"></a>
+      </header>
+      <div class="sidebar__body">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="#" class="menu__link"><span class="menu__icon">
+                      <svg class="icon icon-trans ">
+                        <use xlink:href="img/icons-svg/svg-sprite.svg#trans"></use>
+                      </svg></span><span class="menu__value">Транзакции</span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link"><span class="menu__icon">
+                      <svg class="icon icon-profile ">
+                        <use xlink:href="img/icons-svg/svg-sprite.svg#profile"></use>
+                      </svg></span><span class="menu__value">Профиль</span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link"><span class="menu__icon">
+                      <svg class="icon icon-setts ">
+                        <use xlink:href="img/icons-svg/svg-sprite.svg#setts"></use>
+                      </svg></span><span class="menu__value">Настройки</span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link"><span class="menu__icon">
+                      <svg class="icon icon-payments ">
+                        <use xlink:href="img/icons-svg/svg-sprite.svg#payments"></use>
+                      </svg></span><span class="menu__value">Выплаты</span></a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__item"><a href="#" class="menu__link">
-              <!-- span.menu__icon-->
-                  <svg class="icon icon-trans ">
-                    <use xlink:href="img/icons-svg/svg-sprite.svg#trans"></use>
-                  </svg><span class="menu__value">Транзакции</span></a></li>
-          <li class="menu__item"><a href="#" class="menu__link">
-              <!-- span.menu__icon-->
-                  <svg class="icon icon-profile ">
-                    <use xlink:href="img/icons-svg/svg-sprite.svg#profile"></use>
-                  </svg><span class="menu__value">Профиль</span></a></li>
-          <li class="menu__item"><a href="#" class="menu__link">
-              <!-- span.menu__icon-->
-                  <svg class="icon icon-setts ">
-                    <use xlink:href="img/icons-svg/svg-sprite.svg#setts"></use>
-                  </svg><span class="menu__value">Настройки</span></a></li>
-          <li class="menu__item"><a href="#" class="menu__link">
-              <!-- span.menu__icon-->
-                  <svg class="icon icon-payments ">
-                    <use xlink:href="img/icons-svg/svg-sprite.svg#payments"></use>
-                  </svg><span class="menu__value">Выплаты</span></a></li>
-        </ul>
-      </nav>
     </aside>
     <main class="main">
       <header class="header">
-        <h1>Header</h1>
+        <div class="header__security security-header">
+          <div class="security-header__icon"></div>
+          <div class="security-header__text">2FA</div>
+        </div>
+        <div class="header__actions actions-header">
+          <div class="actions-header__item item-actions-header">
+            <div class="item-actions-header__icon"></div>
+            <div class="item-actions-header__money">5 100.02 </div>
+          </div><a href="#" class="actions-header__item item-actions-header">
+            <div class="item-actions-header__icon"></div>
+            <div class="item-actions-header__val">Ресселер тест</div></a>
+          <button type="button" class="actions-header__item item-actions-header">
+            <div class="item-actions-header__icon"></div>
+            <div class="item-actions-header__val">Выйти</div>
+          </button>
+        </div>
       </header>
       <div class="main-content">
         <section class="example">
@@ -61,7 +74,8 @@
         </section>
       </div>
       <footer class="footer">
-        <h1>Footer</h1>
+        <div class="footer__copyright">Pay2Game 2024</div>
+        <div class="footer__version">Version 1.0</div>
       </footer>
     </main>
     

@@ -32,6 +32,8 @@ body{
 	}
 }
 .sidebar{
+	display: flex;
+	flex-direction: column;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -42,10 +44,15 @@ body{
 	transition: all .2s;
 }
 .sidebar__top {
+	flex: 0 0 auto;
 	display: flex;
 	align-items: center;
 	column-gap: rem(16);
 	padding: rem(16) rem(16) rem(20) rem(48);
+}
+.sidebar__body{
+	flex: 1 1 auto;
+	overflow-y: auto;
 }
 .sidebar__burger {
 	@include but-null();
@@ -91,7 +98,6 @@ body{
 	padding: rem(18) rem(18) rem(18) rem(50);
 	font-family: $med;
 	text-decoration: none;
-	transition: all .2s;
 
 	&:before{
 		content: '';
@@ -117,16 +123,20 @@ body{
 		}
 
 
-	.icon{
-		font-size: rem(20);
-	}
-	.icon-payments {
-		font-size: rem(16);
-	}
+	// .icon{
+	// 	font-size: rem(20);
+	// }
+	// .icon-payments {
+	// 	font-size: rem(16);
+	// }
 }
 .menu__icon{
 	flex-shrink: 0;
 	width: rem(20);
+	height: rem(20);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .icon-trans {}
 .icon-profile {}

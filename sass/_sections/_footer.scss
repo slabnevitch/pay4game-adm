@@ -1,5 +1,11 @@
 /*--------------------footer----------------------*/
 .footer{
-	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: rem(16);
+	padding: rem(24) rem(100) rem(24) rem(16);
+	font-family: $med;
+	color: rgba(#fff, .5);
 }
 /*--------------------END footer----------------------*/ 

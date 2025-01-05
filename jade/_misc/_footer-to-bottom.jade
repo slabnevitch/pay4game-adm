@@ -1,5 +1,5 @@
 aside.sidebar
-	.sidebar__top
+	header.sidebar__top
 		button(type="button").sidebar__burger
 			+icon('burger')
 		a(href="#").sidebar__logo
@@ -7,14 +7,16 @@ aside.sidebar
 	
 
 	- var menu = [{name: 'Транзакции', icon: 'trans'}, {name: 'Профиль', icon: 'profile'}, {name: 'Настройки', icon: 'setts'}, {name: 'Выплаты', icon: 'payments'}];
-	nav.menu
-		ul.menu__list
-			each item, i in menu
-				li.menu__item
-					a(href="#").menu__link
-						// span.menu__icon
-						+icon(item.icon)
-						span.menu__value= item.name
+	
+	.sidebar__body
+		nav.menu
+			ul.menu__list
+				each item, i in menu
+					li.menu__item
+						a(href="#").menu__link
+							span.menu__icon
+								+icon(item.icon)
+							span.menu__value= item.name
 main.main
 	include ../_sections/header
 	.main-content
