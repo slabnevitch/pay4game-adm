@@ -1,0 +1,40 @@
+section.settings
+	h1 Настройки
+
+	form(action="#" class="form").settings__form.form-settings
+		.form-settings__block
+			.form-settings__title Уведомления
+			label.form__area-label
+				textarea.form__area https://pay4game/local/notification
+			
+			.form-settings__caption на этот URL будут отправляться уведомления о статусе платежей
+
+		.form-settings__block
+			.form-settings__title API токен
+			
+			label.form__area-label
+				textarea.form__area ACMA:I4c4CxCSYaI41RSC2uYWP2qj3Rhhm4knMiBEga5K:151c0664
+			
+			.form__custom-policy
+				label.form__custom
+					input.form__check(type='checkbox' name='token' value='chekbox1' required='required')
+					span.form__custom-chek
+						+icon('check')
+				span.form__policy Сгенерировать новый
+
+		.form-settings__block
+			.form-settings__title Секретный ключ
+			
+			label.form__area-label
+				textarea.form__area ACMA:I4c4CxCSYaI41RSC2uYWP2qj3Rhhm4knMiBEga5K:151c0664
+			
+			.form__custom-policy
+				label.form__custom
+					input.form__check(type='checkbox' name='key' value='chekbox2' required='required')
+					span.form__custom-chek
+						+icon('check')
+				span.form__policy Сгенерировать новый
+
+		.form-settings__bottom
+			button.btn(type="submit") Сохранить
+

@@ -1,0 +1,32 @@
+/*--------------------settings----------------------*/
+.settings {}
+.form {}
+.settings__form {}
+.form-settings {}
+.form-settings__block {
+	padding: rem(24);
+	@extend .border;
+	font-family: $light;
+	margin-bottom: rem(24);
+
+}
+.form-settings__title {
+	margin-bottom: rem(16);
+}
+.form__area {}
+.form-settings__caption{
+	color: rgba(#fff, .5);
+}
+.form__custom {}
+.form__check {}
+.form__custom-chek {}
+.icon {}
+.icon-check {}
+.form__policy {}
+.form-settings__bottom {
+	// padding-top: rem(24);
+	text-align: right;
+
+}
+
+/*--------------------END settings----------------------*/ 
