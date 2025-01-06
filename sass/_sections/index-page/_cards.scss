@@ -1,7 +1,15 @@
 /*--------------------cards----------------------*/
 .cards {}
 .cards__content {
+	max-width: rem(1052);
 	 @include flex-cols-gap(16, 16, 3, ($md: 2, $xs: 1), 'card', 1);
+
+	 .sidebar-expanded &{
+		 @include max-screen($lg){
+		 	@include flex-cols-gap(16, 16, 3, ($lg: 2, $xs: 1), 'card', 1);
+		 }
+
+	 }
 }
 .card {
 	padding: rem(29) rem(24) rem(24) rem(24);
@@ -12,16 +20,22 @@
 .card__top {
 	flex: 0 0 auto;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 	column-gap: rem(16);
 	padding-bottom: rem(21);
+
+	.icon-ruble-gray{
+		height: rem(36);
+		opacity: .7;
+	}
 }
 .card__total {
 	font-size: rem(32);
 	font-family: $bold;
 }
 .card__wallet {
-	font-size: rem(36);
+	flex-shrink: 0;
 	color: #929DA8;
 }
 .card__body {

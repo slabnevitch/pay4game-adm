@@ -5,9 +5,11 @@ section.cards
 			.card
 				.card__top
 					.card__total 5 100.02
-					.card__wallet &#8381;
+					// .card__wallet &#8381;
+					.card__wallet
+						+icon('ruble-gray')
 				.card__body
 					.card__text Баланс
 				
 				.card__bottom
-					button.btn(type="button") Подробнее
+					a(href="#").btn Подробнее

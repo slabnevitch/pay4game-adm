@@ -79,14 +79,24 @@
 	// }
 	// End ibg class
 
+	if (window.innerWidth > 991.98) {
+		document.documentElement.classList.add('sidebar-expanded');
+	}
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
+		
 
 		document.onclick = function(e) {
 			var targ = e.target;
 
 			if(targ.closest('.sidebar__burger') !== null){
-				document.documentElement.classList.toggle('sidebar-folded');
+				if(document.documentElement.classList.contains('sidebar-expanded')){
+					document.documentElement.classList.remove('sidebar-expanded');
+					document.documentElement.classList.add('sidebar-folded');
+				}else{
+					document.documentElement.classList.add('sidebar-expanded');
+					document.documentElement.classList.remove('sidebar-folded');
+				}
 			}
 		}
 		

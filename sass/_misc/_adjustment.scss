@@ -48,6 +48,7 @@ body{
 }
 .sidebar{
 	display: flex;
+	z-index: 2;
 	flex-direction: column;
 	position: fixed;
 	left: 0;
@@ -58,7 +59,16 @@ body{
 	background-color: $acc-dark;
 	transition: all .2s;
 
+
+	.sidebar-expanded &{
+		@include max-screen($md){
+			width: rem(300);
+		}
+	}
 	.sidebar-folded &{
+		width: rem(62);
+	}
+	@include max-screen($md){
 		width: rem(62);
 	}
 }
@@ -70,6 +80,19 @@ body{
 	padding: rem(16) rem(16) rem(20) rem(48);
 	transition: all .2s;
 
+
+	@include max-screen($md){
+		padding-left: rem(9);
+		padding-right: rem(9);
+		
+	}
+
+	.sidebar-expanded &{
+		@include max-screen($md){
+			padding-left: rem(48);
+			padding-right: rem(16);
+		}
+	}
 	.sidebar-folded &{
 		padding-left: rem(9);
 		padding-right: rem(9);
@@ -96,6 +119,16 @@ body{
 .sidebar__logo {
 	width: 121px;
 
+	@include max-screen($md){
+		display: none;
+		
+	}
+
+	.sidebar-expanded &{
+		@include max-screen($md){
+			display: block;
+		}
+	}
 	.sidebar-folded &{
 		display: none;
 	}
@@ -133,6 +166,17 @@ body{
 	text-decoration: none;
 	transition: all .2s;
 
+	@include max-screen($md){
+		padding-left: rem(20.5);
+		padding-right: rem(20.5);
+	}
+
+	.sidebar-expanded &{
+		@include max-screen($md){
+			padding-left: rem(50);
+			padding-right: rem(18);
+		}
+	}
 	.sidebar-folded &{
 		padding-left: rem(20.5);
 		padding-right: rem(20.5);
@@ -162,12 +206,12 @@ body{
 		}
 
 
-	// .icon{
-	// 	font-size: rem(20);
-	// }
-	.icon-payments {
-		font-size: rem(16);
+	.icon{
+		height: rem(20);
 	}
+	// .icon-payments {
+	// 	font-size: rem(16);
+	// }
 }
 .menu__icon{
 	flex-shrink: 0;
@@ -178,7 +222,16 @@ body{
 	justify-content: center;
 }
 .menu__value{
+	@include max-screen($md){
+		display: none;
+		
+	}
+	.sidebar-expanded &{
+		@include max-screen($md){
+			display: block;	
+		}
 
+	}
 	.sidebar-folded &{
 		display: none;
 	}
@@ -228,6 +281,9 @@ html, body{
 	overflow: hidden;
 	transition: padding-left .2s;
 
+	@include max-screen($md){
+		padding-left: rem(62);
+	}
 	.sidebar-folded &{
 		padding-left: rem(62);
 	}
