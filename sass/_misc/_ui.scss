@@ -65,6 +65,12 @@ h2{
 
 		}
 	}
+
+  &-empty{
+    background-color: transparent;
+    color: $accent;
+    border: rem(1) solid $accent;
+  }
 //   &:active{
 //    background-color: darken($accent, 5%);
 //   }

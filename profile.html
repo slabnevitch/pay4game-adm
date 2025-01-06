@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Настройки
+    <title>Профиль
     </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,11 +34,11 @@
                       <svg class="icon icon-trans ">
                         <use xlink:href="img/icons-svg/svg-sprite.svg#trans"></use>
                       </svg></span><span class="menu__value">Транзакции</span></a></li>
-            <li class="menu__item"><a href="#" class="menu__link"><span class="menu__icon">
+            <li class="menu__item active"><a href="#" class="menu__link"><span class="menu__icon">
                       <svg class="icon icon-profile ">
                         <use xlink:href="img/icons-svg/svg-sprite.svg#profile"></use>
                       </svg></span><span class="menu__value">Профиль</span></a></li>
-            <li class="menu__item active"><a href="#" class="menu__link"><span class="menu__icon">
+            <li class="menu__item"><a href="#" class="menu__link"><span class="menu__icon">
                       <svg class="icon icon-setts ">
                         <use xlink:href="img/icons-svg/svg-sprite.svg#setts"></use>
                       </svg></span><span class="menu__value">Настройки</span></a></li>
@@ -82,48 +82,55 @@
       </header>
       <div class="main-content">
         <div class="page">
-          <section class="settings">
-            <h1>Настройки</h1>
-            <form action="#" class="form settings__form form-settings">
-              <div class="form__block">
-                <div class="form__block-title">Уведомления</div>
-                <label class="form__area-label">
-                  <textarea class="form__area">https://pay4game/local/notification</textarea>
-                </label>
-                <div class="form__caption">на этот URL будут отправляться уведомления о статусе платежей</div>
-              </div>
-              <div class="form__block">
-                <div class="form__block-title">API токен</div>
-                <label class="form__area-label">
-                  <textarea class="form__area">ACMA:I4c4CxCSYaI41RSC2uYWP2qj3Rhhm4knMiBEga5K:151c0664</textarea>
-                </label>
-                <div class="form__custom-policy">
-                  <label class="form__custom">
-                    <input type="checkbox" name="token" value="chekbox1" required="required" class="form__check"><span class="form__custom-chek">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/svg-sprite.svg#check"></use>
-                          </svg></span>
-                  </label><span class="form__policy">Сгенерировать новый</span>
+          <section class="profile">
+            <header class="profile__header">
+              <h1>Профиль</h1>
+              <div class="btn btn-empty">Верифицирован</div>
+            </header>
+            <div class="profile__body">
+              <form action="#" class="form">
+                <div class="form__block">
+                  <div class="form__block-title">Информация о юр.лице</div>
+                  <div class="profile__columns">
+                    <textarea placeholder="Название компании на латинице" class="form__area profile__column"></textarea>
+                    <textarea placeholder="Адрес, улица и номер дома" class="form__area profile__column"></textarea>
+                    <input autocomplete="off" type="text" name="person-field2" placeholder="Город" class="form__input profile__column">
+                    <input autocomplete="off" type="text" name="person-field3" placeholder="Страна" class="form__input profile__column">
+                    <input autocomplete="off" type="text" name="person-field4" placeholder="Почтовый индекс" class="form__input profile__column">
+                    <input autocomplete="off" type="text" name="person-field5" placeholder="TAX ID (ИНН)" class="form__input profile__column">
+                    <input autocomplete="off" type="text" name="person-field6" placeholder="Телефон" class="form__input profile__column">
+                    <input autocomplete="off" type="text" name="person-field7" placeholder="Сайт" class="form__input profile__column">
+                  </div>
                 </div>
-              </div>
-              <div class="form__block">
-                <div class="form__block-title">Секретный ключ</div>
-                <label class="form__area-label">
-                  <textarea class="form__area">ACMA:I4c4CxCSYaI41RSC2uYWP2qj3Rhhm4knMiBEga5K:151c0664</textarea>
-                </label>
-                <div class="form__custom-policy">
-                  <label class="form__custom">
-                    <input type="checkbox" name="key" value="chekbox2" required="required" class="form__check"><span class="form__custom-chek">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/svg-sprite.svg#check"></use>
-                          </svg></span>
-                  </label><span class="form__policy">Сгенерировать новый</span>
+                <div class="form__block">
+                  <div class="form__block-title">Информация о представителе</div>
+                  <div class="profile__columns">
+                    <input autocomplete="off" type="text" name="person-field0" placeholder="ФИО представителя" class="form__input profile__column">
+                    <textarea placeholder="Адрес представителя, улица и номер дома" class="form__area profile__column"></textarea>
+                    <input autocomplete="off" type="text" name="person-field2" placeholder="Город" class="form__input profile__column">
+                    <input autocomplete="off" type="text" name="person-field3" placeholder="Страна" class="form__input profile__column">
+                    <input autocomplete="off" type="text" name="person-field4" placeholder="Почтовый индекс" class="form__input profile__column">
+                    <input autocomplete="off" type="text" name="person-field5" placeholder="TAX ID (ИНН)" class="form__input profile__column">
+                    <input autocomplete="off" type="text" name="person-field6" placeholder="Телефон" class="form__input profile__column">
+                    <input autocomplete="off" type="text" name="person-field7" placeholder="Сайт" class="form__input profile__column">
+                  </div>
                 </div>
-              </div>
-              <div class="form__bottom">
-                <button type="submit" class="btn">Сохранить</button>
-              </div>
-            </form>
+                <div class="form__block">
+                  <div class="form__block-title">Изменить пароль</div>
+                  <div class="profile__inputs">
+                    <label class="form__label">
+                      <input autocomplete="off" type="text" name="person-field0" placeholder="Новый пароль" class="form__input profile__column">
+                    </label>
+                    <label class="form__label">
+                      <input autocomplete="off" type="text" name="person-field1" placeholder="Подтверждение пароля" class="form__input profile__column">
+                    </label>
+                  </div>
+                </div>
+                <div class="form__bottom">
+                  <button type="submit" class="btn">Сохранить</button>
+                </div>
+              </form>
+            </div>
           </section>
         </div>
       </div>

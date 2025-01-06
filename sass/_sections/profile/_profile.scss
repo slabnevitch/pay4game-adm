@@ -1,0 +1,23 @@
+/*--------------------profile----------------------*/
+.profile__header{
+	margin-bottom: rem(48);
+
+	@include min-screen($xs){
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: rem(16);
+	}
+
+	h1{
+		@include min-screen($xs){
+			margin-bottom: 0;
+			
+		}
+	}
+}
+.profile__columns{
+	@include flex-cols-gap(16, 16, 2, ($xs: 1), 'profile__column', 1);
+	align-items: center;
+}
+/*--------------------END profile----------------------*/ 

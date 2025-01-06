@@ -1,0 +1,46 @@
+section.profile
+	header.profile__header
+		h1 Профиль
+		.btn.btn-empty Верифицирован
+
+	.profile__body
+		form(action="#" class="form")
+			.form__block
+				.form__block-title Информация о юр.лице
+
+				- var inps = [{text: 'Название компании на латинице', area: true}, {text: 'Адрес, улица и номер дома', area: 1}, {text: 'Город', area: 0},  {text: 'Страна', area: 0}, {text: 'Почтовый индекс', area: 0}, {text: 'TAX ID (ИНН)', area: 0}, {text: 'Телефон', area: 0}, {text: 'Сайт', area: 0},];
+				
+				.profile__columns
+					each item, i in inps
+						if item.area
+							textarea(placeholder=item.text).form__area.profile__column
+						else
+							input(autocomplete="off" type="text" name="person-field" + i class="form__input profile__column" placeholder=item.text)
+
+			.form__block
+				.form__block-title Информация о представителе
+
+				- var inps2 = [{text: 'ФИО представителя', area: 0}, {text: 'Адрес представителя, улица и номер дома', area: 1}, {text: 'Город', area: 0},  {text: 'Страна', area: 0}, {text: 'Почтовый индекс', area: 0}, {text: 'TAX ID (ИНН)', area: 0}, {text: 'Телефон', area: 0}, {text: 'Сайт', area: 0},];
+				
+				.profile__columns
+					each item, i in inps2
+						if item.area
+							textarea(placeholder=item.text).form__area.profile__column
+						else
+							input(autocomplete="off" type="text" name="person-field" + i class="form__input profile__column" placeholder=item.text)
+
+			.form__block
+				.form__block-title Изменить пароль
+
+				- var inps3 = [{text: 'Новый пароль', area: 0}, {text: 'Подтверждение пароля', area: 0}];
+				
+				.profile__inputs
+					each item, i in inps3
+						if item.area
+							label.form__label
+								textarea(placeholder=item.text).form__area.profile__column
+						else
+							label.form__label
+								input(autocomplete="off" type="text" name="person-field" + i class="form__input profile__column" placeholder=item.text)
+			.form__bottom
+				button.btn(type="submit") Сохранить

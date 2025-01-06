@@ -7,8 +7,8 @@
 }
 .form__input {
 	height: rem(47);
-	padding-left: rem(24);
-	padding-right: rem(24);
+	padding-left: rem(16);
+	padding-right: rem(16);
 	background-color: #213004;
 	border: 1px solid $accent;
 	border-radius: rem(10);
@@ -77,10 +77,10 @@
 	padding: 0;
 	width: 100%	;
 	height: rem(49);
-	padding-left: rem(24);
-	padding-right: rem(24);
-	padding-top: rem(14);
-	padding-bottom: rem(14);
+	padding-left: rem(16);
+	padding-right: rem(16);
+	padding-top: rem(12);
+	padding-bottom: rem(16);
 	background-color: #213004;
 	border: 1px solid $accent;
 	border-radius: rem(10);
@@ -93,6 +93,23 @@
 	overflow: hidden;
 }
 .form__policy {
+
+}
+.form__block {
+	padding: rem(24);
+	@extend .border;
+	font-family: $light;
+	margin-bottom: rem(24);
+}
+.form__block-title {
+	margin-bottom: rem(16);
+}
+.form__caption{
+	color: rgba(#fff, .5);
+}
+.form__bottom {
+	// padding-top: rem(24);
+	text-align: right;
 
 }
 
