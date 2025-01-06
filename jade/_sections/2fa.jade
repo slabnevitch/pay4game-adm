@@ -1,0 +1,30 @@
+section.twofa
+	.twofa__top
+		h1 Двухфакторная аутентификация
+
+		p.twofa__text Для продолжения необходимо включить двухфакторную аутентификацию 
+			br
+			| Отсканируйте #[a(href="#") QR код] или введите #[a(href="#") ключ настройки] в приложении Google Authentificator
+
+	.twofa__content.content-twofa
+		.content-twofa__header Google 2FA
+
+		form(action="#").form.content-twofa__body
+				.content-twofa__qr
+					.content-twofa__qr-block
+						.content-twofa__code
+							img(src="img/qr.png" alt="alt")
+						.content-twofa__caption QR-код
+
+				.content-twofa__key
+					.content-twofa__key-block
+						.content-twofa__key-title Ключ настройки
+						.content-twofa__inputs
+							label.form__label
+								input(readonly autocomplete="off" type="text" name="" class="form__input" value="D3OUR2M5IKE4XQ")
+
+							label.form__label
+								input(autocomplete="off" type="text" name="" class="form__input" placeholder="Одноразовый код")
+							
+						.content-twofa__bottom
+							button.btn(type="submit") Подтвердить

@@ -1,15 +1,31 @@
+.form__label {
+	display: block;
+
+	&:not(:last-child){
+		margin-bottom: rem(24);
+	}
+}
 .form__input {
-	height: rem(50);
+	height: rem(47);
 	padding-left: rem(24);
 	padding-right: rem(24);
-	border: 1px solid #000;
-	padding-right: 55px;
-	background: #fff ;
-	border-radius: rem(3) 0 0 rem(3);
+	background-color: #213004;
+	border: 1px solid $accent;
+	border-radius: rem(10);
 	@include placecolor(rgba(#fff, 0.5));
-	color: #fff;
-	font-family: inherit;
+	color: rgba(#fff, 0.5);
+	font-family: $light;
+	font-size: rem(16);
+	text-align: center;
+
+
+	&[readonly]{
+		background-color: transparent;
+		@include vertical-grad(rgba(#6485A8, .2), rgba(#20364E, .2));
+		color: #939EAB;
+	}
 }
+
 .form__custom-policy {
 	display: flex;
 	align-items: flex-start;

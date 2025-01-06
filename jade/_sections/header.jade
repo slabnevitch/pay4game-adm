@@ -1,7 +1,11 @@
 header.header
 	.header__security.security-header
 		.security-header__icon
-			+icon('security-green')
+			if page == '2fa'
+				+icon('security-red')
+			else
+				+icon('security-green')
+		
 		.security-header__text 2FA
 
 	.header__actions.actions-header

@@ -139,10 +139,13 @@ body{
 	}
 }
 .menu {}
-.menu__list {}
+.menu__list {
+	border-top: 1px solid #0A1F36;
+
+}
 .menu__item {
 	list-style-type: none;
-
+	border-bottom: 1px solid #0A1F36;
 	&.active{
 		.menu__link {
 			@include vertical-grad(#213953, #1B2D41);
@@ -338,7 +341,7 @@ h1,h2,h3,h4,h5,h6{
 p{
 	margin: 0;
 }
-input
+// input
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -466,7 +469,7 @@ padding-bottom: 52.25%;
 
 // service ui elements styles
 // @import "_misc/_tabs-accordion";
-// @import "_misc/_form";
+@import "_misc/_form";
 // @import "_misc/font-rating";//подключить, если для звез рейтинга исп-я. icomoon
 // @import "_misc/_rating";
 // @import "_misc/_noUiSlider-base";

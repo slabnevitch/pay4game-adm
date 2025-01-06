@@ -1,0 +1,94 @@
+/*--------------------2fa----------------------*/
+.twofa {}
+.twofa__top{
+	margin-bottom: rem(38);
+	@include max-screen($sm){	
+		margin-bottom: rem(48);
+	}
+}
+.twofa__text {
+	max-width: rem(670);
+	font-family: $med;
+
+	@include max-screen($xsss){
+		letter-spacing: -.5px;
+	}
+
+	a{
+		text-decoration: none;
+		color: $accent;
+	}
+}
+.twofa__content {
+	padding-bottom: rem(48);
+	font-family: $light;
+	@extend .border;
+	@include vertical-grad(#213953, #1B2D41);
+}
+.content-twofa {}
+.content-twofa__header {
+	padding: rem(24) rem(16);
+	border-bottom: rem(1) solid $accent;
+}
+.form {}
+.content-twofa__body {
+	padding-top: rem(46);
+	padding-right: rem(20);
+	padding-left: rem(20);
+	display: flex;
+	column-gap: rem(16);
+
+	@include max-screen($sm){
+		flex-direction: column;
+		row-gap: rem(24);
+	}
+}
+.content-twofa__qr {
+	flex: 0 0 calc(prc(385,1062));
+	display: flex;
+	justify-content: center;
+}
+.content-twofa__qr-block {
+	text-align: center;
+}
+.content-twofa__code {
+	width: rem(153);
+	height: rem(158);
+	padding: rem(10);
+	margin-bottom: rem(16);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	img{
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+.content-twofa__caption {}
+.content-twofa__key {
+	flex: 1 1 auto;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: prc(129,1062);
+
+	@include max-screen($sm){
+		justify-content: center;
+		padding-right: 0;
+	}
+}
+.content-twofa__key-block {
+	max-width: rem(340);
+	width: 100%;
+}
+.content-twofa__inputs{
+}
+.content-twofa__key-title {
+	margin-bottom: rem(24);
+}
+.content-twofa__bottom {
+	padding-top: rem(24);
+	text-align: right;
+}
+
+/*--------------------END 2fa----------------------*/ 

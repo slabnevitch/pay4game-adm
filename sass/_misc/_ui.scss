@@ -75,68 +75,72 @@ h2{
    
 }
 
-.toggle-mnu{
-	position: relative;
-	// right: rem(30);
-	// top: rem(15);
-  display: none;
-  width: rem(36);
-  height: rem(24);
-  // margin-top: rem(14);
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  z-index: 4;
+.breadcrumbs {
+  margin-top: rem(10);
+  padding: 0 rem(16);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  column-gap: rem(16);
 
-  span:after, span:before{
+  @include max-screen($xss){
+    
+    column-gap: rem(3);
+  }
+}
+.breadcrumbs__item {
+  list-style-type: none;
+  position: relative;
 
-    content: "";
-    position: absolute;
-    left: 0;
-    top: rem(10);
-  } 
+  @include max-screen($xss){
+    display: none;
+  }
+ 
+  &:not(:last-child){
+    &:after{
+      content: '/';
+      margin-left: rem(16);
+      // vertical-align: middle;
+      font-family: $light;
+      color: #909CA8;
 
-  span:after{
-
-    top: rem(20);
+      @include max-screen($xss){
+        margin-left: rem(3);
+      }
+    }
   }
 
-  span{
-
-    position: absolute;
-    top: 0;
-    display: block;
-  } 
-
-  span, span:after, span:before{
-
-    width: 100%;
-    height: rem(4);
-    background-color: #fff;
-    transition: all 0.3s;
-    backface-visibility: hidden;
-
+  &:last-child{
+    .breadcrumbs__link {
+      color: $accent;
+    }
+    @include max-screen($xss){
+      display: block;
+    }
   }
 
 
-  &.on span{
-
-    background-color: transparent;
-  } 
-
-  &.on span:before{
-
-    transform: rotate(45deg) translate(rem(-1), 0);
-  } 
-
-  &.on span:after{
-
-    transform: rotate(-45deg) translate(rem(6), rem(-7));
-  } 
-
-  @include max-screen($sm){
-  	display: block;
+  &:nth-last-child(2){
+    @include max-screen($xss){
+      display: block;
+      
+    }
+    @include min-screen($xss){
+      display: none;
+      
+    }
   }
-} 
 
+  // &:not(:last-child),
+  // &:not(:nth-last-child(2)){
+  //   @include max-screen($xss){
+  //     display: none;
+  //   }
+  // }
+}
+.breadcrumbs__link {
+  text-decoration: none;
+  color: #909CA8;
+  font-family: $light;
+}
 /*--------------------END ui----------------------*/ 
