@@ -1,4 +1,10 @@
 /*--------------------transactions-table----------------------*/
+
+.ellipse--trans{
+	@include max-screen($sm){
+		display: none;
+	}
+}
 .transactions__table {
 	margin-right: rem(-24);
 	overflow-x: auto;
@@ -31,6 +37,11 @@
 	.adm-table--transactions{
 		// overflow-x: auto;
 		// min-width: rem(2248);
+		.ellipse{
+			@include min-screen($sm){
+				display: none;
+			}
+		}
 	}
 	.adm-table__header{
 		.adm-table__row{
