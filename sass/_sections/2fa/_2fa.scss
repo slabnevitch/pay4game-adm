@@ -10,10 +10,6 @@
 	max-width: rem(670);
 	font-family: $med;
 
-	@include max-screen($xsss){
-		letter-spacing: -.5px;
-	}
-
 	a{
 		text-decoration: none;
 		color: $accent;

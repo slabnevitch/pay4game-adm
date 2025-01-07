@@ -245,6 +245,11 @@ body{
 
 .page{
 	padding: rem(48) rem(26) rem(48) rem(22);
+
+	@include max-screen($sm){
+		padding-left: rem(16);
+		padding-right: rem(16);
+	}
 }
 // компенсация ширины скроллбара при появлении ванильных поапов
 // все содержимое страницы оборачивается в #wrapper-for-scroll-fix

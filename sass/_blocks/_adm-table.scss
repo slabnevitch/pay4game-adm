@@ -1,0 +1,85 @@
+/*--------------------adm-table----------------------*/
+
+.adm-table {
+	font-family: $light;
+
+	@include min-screen($sm){
+		text-align: center;
+		
+	}
+	& ~ .ellipse{display: none;}
+}
+.adm-table--payments {}
+.adm-table__header {
+	@include max-screen($sm){
+		display: none;
+	}
+}
+.adm-table__row{
+	display: flex;
+	padding: rem(17) 0;
+	border-bottom: rem(1) solid $accent;
+
+	@include max-screen($sm){
+		padding: rem(24) rem(15);
+		flex-direction: column;
+		row-gap: rem(11);
+		border: rem(1) solid $accent;
+		border-radius: rem(12);
+	}
+
+	&:not(:last-child){
+		@include max-screen($sm){
+			margin-bottom: rem(16);
+			
+		}
+	}
+
+}
+.adm-table__col {
+	padding: 0 rem(5);
+
+	@include max-screen($sm){
+		display: flex;
+		justify-content: space-between;
+		column-gap: rem(16);
+	}
+	@include min-screen($sm){
+		text-align: center;
+		
+	}
+}
+.adm-table__body {}
+.adm-table__caption {
+		color: rgba(#fff, .5);
+
+	@include min-screen($sm){
+		color: #fff;
+		display: none;
+	}
+}
+.adm-table__val {
+	@include max-screen($sm){
+		text-align: right;
+	}
+}
+.adm-table__label {
+	min-height: rem(27);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: rem(3) rem(19) rem(5) rem(19);
+	font-family: $light;
+	color: #292824;
+	border-radius: rem(40);
+}
+.adm-table__label--success {
+	background-color: $accent;
+}
+.adm-table__label--warning {
+	background-color: #F9C800;
+}
+.adm-table__label--danger {
+	background-color: #F90000;
+}
+/*--------------------END adm-table----------------------*/ 

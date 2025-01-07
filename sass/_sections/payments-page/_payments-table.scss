@@ -1,0 +1,77 @@
+/*--------------------payments-table----------------------*/
+.payments__table {
+	.adm-table__body{
+		.adm-table__col{
+			&:nth-child(4){
+				@include min-screen($sm){
+					@include dots-family();
+					
+				}
+
+				.adm-table__val{
+					@include max-screen($sm){
+						word-break: break-word;
+					}
+					@include min-screen($sm){
+						@include dots-family();
+						
+					}
+				}
+
+			}
+		}
+	}
+
+	.adm-table__col{
+		&:first-child{
+			flex: 0 0 prc(117, 1064);
+		}
+
+		&:nth-child(2){
+			flex: 0 0 prc(200, 1064);
+			
+		}
+		&:nth-child(3){
+			flex: 0 0 prc(120, 1064);
+			
+		}
+		&:nth-child(4){
+			// flex: 0 0 prc(270, 1064);
+			flex: 1 1 auto;
+		}
+		&:nth-child(5){
+			flex: 0 0 prc(149, 1064);
+			min-width: rem(149);
+			
+			@include max-screen($sm){
+				order: 2;
+			}
+			.adm-table__caption{
+				@include max-screen($sm){
+					display: none;
+				}
+			}
+		}
+		&:nth-child(6){
+			flex: 0 0 prc(208, 1064);
+			
+			@include max-screen($sm){
+				justify-content: flex-end;
+				order: 1;
+			}
+
+			.adm-table__caption{
+				@include max-screen($sm){
+					display: none;
+				}
+			}
+			.adm-table__val{
+				@include max-screen($sm){
+					color: rgba(#fff, .5);
+				}
+			}
+		}
+
+	}
+}
+/*--------------------END payments-table----------------------*/ 

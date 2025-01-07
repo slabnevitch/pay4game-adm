@@ -1,0 +1,50 @@
+.payments__table
+	- var cols = ['ID', 'Сумма выплаты', 'Курс USDT', 'Кошелек USDT', 'Статус', 'дата создания'];
+	- var body1 = ['1', '1 100₽', '102₽', 'TRCTRCTRCD3OUR2M5IKE4XQ', {text:'Ожидание', status: 'warning'}, '10.08.2024'];
+	- var body2 = ['1', '1 100₽', '102₽', 'TRCTRCTRCD3OUR2M5IKE4XQ', {text:'Ожидание', status: 'danger'}, '10.08.2024'];
+
+	- var body3 = ['1', '1 100₽', '102₽', 'TRCTRCTRCD3OUR2M5IKE4XQ', {text:'Выплачено', status: 'success'}, '10.08.2024'];
+	
+	.adm-table.adm-table--payments
+		.adm-table__header
+			.adm-table__row
+				each col in cols
+					.adm-table__col= col
+		
+		.adm-table__body
+			.adm-table__row
+				each col, i in body1
+					.adm-table__col
+						if col.status 
+							.adm-table__caption Статус
+							.adm-table__val
+								div(class="adm-table__label adm-table__label--"+col.status)= col.text
+
+						else
+							.adm-table__caption= cols[i]
+							.adm-table__val= col
+
+			.adm-table__row
+				each col, i in body2
+					.adm-table__col
+						if col.status 
+							.adm-table__caption Статус
+							.adm-table__val
+								div(class="adm-table__label adm-table__label--"+col.status)= col.text
+
+						else
+							.adm-table__caption= cols[i]
+							.adm-table__val= col
+
+			- for (var i=0; i < 6; i++)
+				.adm-table__row
+					each col, i in body3
+						.adm-table__col
+							if col.status 
+								.adm-table__caption Статус
+								.adm-table__val
+									div(class="adm-table__label adm-table__label--"+col.status)= col.text
+
+							else
+								.adm-table__caption= cols[i]
+								.adm-table__val= col

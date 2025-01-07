@@ -91,6 +91,12 @@
 	text-align: center;
 	outline: none;
 	overflow: hidden;
+
+	&[readonly]{
+		background-color: transparent;
+		@include vertical-grad(rgba(#6485A8, .2), rgba(#20364E, .2));
+		color: #939EAB;
+	}
 }
 .form__policy {
 
@@ -100,6 +106,7 @@
 	@extend .border;
 	font-family: $light;
 	margin-bottom: rem(24);
+	background-color: #253D52;
 }
 .form__block-title {
 	margin-bottom: rem(16);

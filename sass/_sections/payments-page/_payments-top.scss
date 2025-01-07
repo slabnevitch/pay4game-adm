@@ -1,0 +1,63 @@
+/*--------------------payments-top----------------------*/
+.payments__top {
+	margin-bottom: rem(24);
+}
+.form {}
+.payments__info {}
+.info-payments {}
+.form__block {}
+.info-payments__header {
+	margin-bottom: rem(16);
+}
+.info-payments__data {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: rem(24);
+
+	@include max-screen($xs){
+		justify-content: flex-start;
+	}
+}
+.info-payments__data-item {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: rem(43);
+	padding: rem(7) rem(32);
+	border-radius: rem(40);
+	color: #fff;
+	font-size: rem(20);
+	line-height: calc(17/20);
+	background-color: $acc-dark;
+
+	@include max-screen($min){
+		padding: rem(7) rem(25);
+	}
+	// &:after{
+	// 	content: '\20BD';
+	// 	font-family:  sans-serif;
+	// }
+
+}
+.info-payments__body {}
+.info-payments__title {
+	font-family: $bold;
+	margin-bottom: rem(16);
+}
+.form__label {}
+.form__area {}
+.form__input {}
+.info-payments__overal {
+	margin: rem(16) 0;
+	.form__caption {
+
+		&:not(:last-child){
+			margin-bottom: rem(16);
+		}
+
+	}
+}
+/*--------------------END payments-top----------------------*/ 

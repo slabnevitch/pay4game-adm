@@ -1,0 +1,24 @@
+.payments__top
+	h1 Выплаты
+	form(action="#").form.payments__info.info-payments
+		.form__block
+			.info-payments__header
+				- var items = ['USDT: 102₽', 'Баланс: 5 100.02₽'];
+				.info-payments__data
+					each item in items
+						.info-payments__data-item= item
+			
+			.info-payments__body
+				.form__block-title Заказать выплату
+				.info-payments__title Кошелек USDT TRC-20
+				.form__label
+					textarea(readonly name="" class="form__area" ) TRCTRCTRCD3OUR2M5IKE4XQ
+				.form__label
+					input(autocomplete="off" type="text" name="" class="form__input" placeholder="Сумма")
+			
+			.info-payments__overal
+				.form__caption Комиссия: 200₽
+				.form__caption К получению: 0₽
+
+			.form__bottom
+				button.btn(type="submit") Заказать
