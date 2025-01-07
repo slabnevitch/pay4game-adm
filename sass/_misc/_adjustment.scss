@@ -48,7 +48,7 @@ body{
 }
 .sidebar{
 	display: flex;
-	z-index: 2;
+	z-index: 99;
 	flex-direction: column;
 	position: fixed;
 	left: 0;

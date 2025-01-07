@@ -1,0 +1,41 @@
+/*--------------------transactions-top----------------------*/
+.transactions__top {
+}
+.form {}
+.transactions__form {
+	.form__bottom{
+		@include max-screen($xs){
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			row-gap: rem(10);
+		}	
+		.btn-dark{
+			margin-right: rem(7);
+		}
+	}
+}
+.form-transactions {}
+.form__block {}
+.form-transactions__row {
+	margin-bottom: rem(16);
+	align-items: center;
+}
+.form-transactions__row--top {
+	@include flex-cols-gap(16, 16, 3, ($xs: 1), 'form-transactions__col', 1);
+}
+.form-transactions__col {}
+.form__select {}
+.fstdropdown-select {}
+.form__input {}
+.form-transactions__row--bottom {
+	@include flex-cols-gap(16, 16, 2, ($md: 3, $sm: 2, $xs: 1), 'form-transactions__col', 1);
+}
+.form__custom-policy {}
+.form__custom {}
+.form__check {}
+.form__custom-chek {}
+.icon {}
+.icon-check {}
+.form__policy {}
+/*--------------------END transactions-top----------------------*/ 

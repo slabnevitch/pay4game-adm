@@ -71,6 +71,13 @@ h2{
     color: $accent;
     border: rem(1) solid $accent;
   }
+
+  &-dark{
+    background-color: transparent;
+    color: #fff;
+    @include vertical-grad(#213953, #1B2D41);
+  }
+
 //   &:active{
 //    background-color: darken($accent, 5%);
 //   }
@@ -148,5 +155,72 @@ h2{
   text-decoration: none;
   color: #909CA8;
   font-family: $light;
+}
+.pagination{
+  @include pagination($width: 40, 
+  $gap: 8, 
+  $fontSize: 14, 
+  $round: 0, 
+  $color: $text, 
+  $bg: transparent, 
+  $activeColor: #051930, 
+  $activeBg: $accent,
+  $arrowColor: $text);
+
+  padding: rem(24) 0;
+
+  @include max-screen($xss){
+    display: none;
+  }
+
+  .pagination__link{
+    aspect-ratio: 40/37;
+    height: auto;
+    text-decoration: none;
+    border-radius: rem(4);
+    font-family: $light;
+  }
+  .pagination__arrow{
+    flex-shrink: 0;
+    width: rem(40);
+    aspect-ratio: 40/37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include vertical-grad(#213953, #1B2D41);
+     border-radius: rem(4);
+
+    .icon{
+      width: rem(5);
+    }
+  }
+}
+.fstdropdown > .fstlist{
+  border-radius: rem(20);
+  background-color: $acc-dark;
+  color: #fff;
+  left: rem(-1);
+}
+.fstdiv.open{
+  z-index: 10;
+}
+.fstdropdown.open:hover{
+  outline: none;
+  box-shadow: none;
+  border-color: $accent;
+}
+.fstlist>div{
+  padding: rem(16) rem(16) rem(16) rem(48);
+  border-bottom-color: #0A1F36;
+  font-family: $med;
+}
+.fstlist>div.selected{
+  background-color: transparent;
+  @include vertical-grad(rgba(#6485A8, .2), rgba(#20364E, .2));
+  color: #fff;
+}
+.fstdropdown>.fstselected:after{
+  right: rem(19);
+  border-color: #fff transparent transparent;
 }
 /*--------------------END ui----------------------*/ 

@@ -1,0 +1,35 @@
+section.transactions
+	.transactions__top
+		h1 Транзакции
+	
+		form(action="#" class="form").transactions__form.form-transactions
+			.form__block
+				.form-transactions__row.form-transactions__row--top
+					- var opts = ['Успех', 'Возврат', 'Ошибка'];
+					- var fields = ['Дата от', 'Дата от'];
+					- var fields2 = ['ID заказа', 'Email плательщика', 'IP покупателя', 'Телефон', 'UUID'];
+					
+					.form-transactions__col
+						select(data-searchdisable="true" class="form__select fstdropdown-select")
+							option(disabled hidden selected value="all") Статус платежа
+							each opt, i in opts
+								option(value=i)= opt
+
+					each field in fields
+						input(autocomplete="off" type="text" name="" class="form-transactions__col form__input" placeholder=field)
+
+				.form-transactions__row.form-transactions__row--bottom
+					each field in fields2
+						input(autocomplete="off" type="text" name="" class="form-transactions__col form__input" placeholder=field)
+
+					.form-transactions__col
+						.form__custom-policy
+							label.form__custom
+								input.form__check(type='checkbox' name='token' value='chekbox1' required='required')
+								span.form__custom-chek
+									+icon('check')
+							span.form__policy Возврат
+			
+				.form__bottom
+					button.btn.btn-dark(type="reset") Сбросить
+					button.btn(type="submit") Найти
