@@ -209,6 +209,14 @@ h2{
     }
   }
 }
+.fstdropdown{
+  cursor: default;
+
+  @media (any-hover: hover) { //только для устройств с ховером
+      cursor: pointer;
+ 
+    }
+}
 .fstdropdown > .fstlist{
   border-radius: rem(20);
   background-color: $acc-dark;
@@ -236,5 +244,9 @@ h2{
 .fstdropdown>.fstselected:after{
   right: rem(19);
   border-color: #fff transparent transparent;
+}
+.fstlist>div:hover{
+  background-color: transparent;
+  @include vertical-grad(rgba(#6485A8, .2), rgba(#20364E, .2));
 }
 /*--------------------END ui----------------------*/ 

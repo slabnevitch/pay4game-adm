@@ -47,6 +47,8 @@
 		display: flex;
 		justify-content: space-between;
 		column-gap: rem(16);
+		padding-left: 0;
+		padding-right: 0;
 	}
 	@include min-screen($sm){
 		text-align: center;
@@ -73,6 +75,10 @@
 	flex-wrap: wrap;
 	align-items: center;
 	gap: rem(8);
+
+	@include max-screen($sm){
+		justify-content: flex-start;
+	}
 }
 .adm-table__label {
 	min-height: rem(27);

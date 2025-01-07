@@ -71,52 +71,133 @@
 				flex: 0 0 rem(236);
 				
 			}
-			
+			.adm-table__caption{
+				@include max-screen($xs){
+					flex: 0 0 rem(120);
+				}
+			}
 		}
 		&:nth-child(4){
+			@include max-screen($xs){
+				display: block;
+			}
+
 			@include min-screen($sm){
 				flex: 0 0 rem(270);
 				
 			}
 
+			.adm-table__caption{
+				@include max-screen($xs){
+					margin-bottom: 12px;
+				}
+			}
+
 		}
 		&:nth-child(5){
+			@include max-screen($xs){
+				display: block;
+			}
+
 			@include min-screen($sm){
 				flex: 0 0 rem(270);
 				
+			}
+
+			.adm-table__caption{
+				@include max-screen($xs){
+					margin-bottom: 12px;
+				}
 			}
 		}
 		&:nth-child(6){
+			@include max-screen($xs){
+				display: block;
+			}
+
 			@include min-screen($sm){
 				flex: 0 0 rem(208);
 				
+			}
+
+			.adm-table__caption{
+				@include max-screen($xs){
+					margin-bottom: 12px;
+				}
 			}
 		}
 		&:nth-child(7){
+			@include max-screen($xs){
+				display: block;
+			}
+
 			@include min-screen($sm){
 				flex: 0 0 rem(208);
 				
 			}
+
+			.adm-table__caption{
+				@include max-screen($xs){
+					margin-bottom: 12px;
+				}
+			}
 		}
 		&:nth-child(8){
+			@include max-screen($xs){
+				display: block;
+			}
+
 			@include min-screen($sm){
 				flex: 0 0 rem(270);
 				
+			}
+			.adm-table__caption{
+				@include max-screen($xs){
+					margin-bottom: 12px;
+				}
 			}
 		}
 		&:nth-child(9){
+			@include max-screen($xs){
+				display: block;
+			}
+
 			@include min-screen($sm){
 				flex: 0 0 rem(270);
 				
+			}
+
+			.adm-table__caption{
+				@include max-screen($xs){
+					margin-bottom: 12px;
+				}
+			}
+			.adm-table__val{
+				word-break: break-word;
 			}
 		}
 		&:nth-child(10){
+
+			@include max-screen($xs){
+				display: block;
+			}
+
 			@include min-screen($sm){
 				flex: 0 0 rem(270);
 				
 			}
+
+			.adm-table__caption{
+				@include max-screen($xs){
+					margin-bottom: 12px;
+				}
+			}
 		}
 		&:nth-child(11){
+			@include max-screen($sm){
+				justify-content: flex-start;
+				padding-top: rem(24);
+			}
 			@include min-screen($sm){
 				flex: 0 0 rem(350);
 				
