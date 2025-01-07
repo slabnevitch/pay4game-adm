@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Выплаты
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" sizes="16x16">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="favic.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <aside class="sidebar">
+      <header class="sidebar__top">
+        <button type="button" class="sidebar__burger">
+              <svg class="icon icon-burger ">
+                <use xlink:href="img/icons-svg/svg-sprite.svg#burger"></use>
+              </svg>
+        </button><a href="#" class="sidebar__logo"><img src="img/logo.svg" alt="alt"></a>
+      </header>
+      <div class="sidebar__body">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="#" class="menu__link"><span class="menu__icon">
+                      <svg class="icon icon-trans ">
+                        <use xlink:href="img/icons-svg/svg-sprite.svg#trans"></use>
+                      </svg></span><span class="menu__value">Транзакции</span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link"><span class="menu__icon">
+                      <svg class="icon icon-profile ">
+                        <use xlink:href="img/icons-svg/svg-sprite.svg#profile"></use>
+                      </svg></span><span class="menu__value">Профиль</span></a></li>
+            <li class="menu__item"><a href="#" class="menu__link"><span class="menu__icon">
+                      <svg class="icon icon-setts ">
+                        <use xlink:href="img/icons-svg/svg-sprite.svg#setts"></use>
+                      </svg></span><span class="menu__value">Настройки</span></a></li>
+            <li class="menu__item active"><a href="#" class="menu__link"><span class="menu__icon">
+                      <svg class="icon icon-payments ">
+                        <use xlink:href="img/icons-svg/svg-sprite.svg#payments"></use>
+                      </svg></span><span class="menu__value">Выплаты</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <div class="header__security security-header">
+          <div class="security-header__icon">
+                <svg class="icon icon-security-green ">
+                  <use xlink:href="img/icons-svg/svg-sprite.svg#security-green"></use>
+                </svg>
+          </div>
+          <div class="security-header__text">2FA</div>
+        </div>
+        <div class="header__actions actions-header"><a href="#" class="actions-header__item item-actions-header">
+            <div class="item-actions-header__icon">
+                  <svg class="icon icon-ruble ">
+                    <use xlink:href="img/icons-svg/svg-sprite.svg#ruble"></use>
+                  </svg>
+            </div>
+            <div class="item-actions-header__money">5 100.02 </div></a><a href="#" class="actions-header__item item-actions-header">
+            <div class="item-actions-header__icon">
+                  <svg class="icon icon-profile ">
+                    <use xlink:href="img/icons-svg/svg-sprite.svg#profile"></use>
+                  </svg>
+            </div>
+            <div class="item-actions-header__val">Ресселер тест</div></a><a href="#" class="actions-header__item item-actions-header">
+            <div class="item-actions-header__icon">
+                  <svg class="icon icon-exit ">
+                    <use xlink:href="img/icons-svg/svg-sprite.svg#exit"></use>
+                  </svg>
+            </div>
+            <div class="item-actions-header__val">Выйти</div></a></div>
+      </header>
+      <div class="main-content">
+        <div class="page">
+          <section class="payments">
+            <div class="payments__top">
+              <h1>Выплаты</h1>
+              <form action="#" class="form payments__info info-payments">
+                <div class="form__block">
+                  <div class="info-payments__header">
+                    <div class="info-payments__data">
+                      <div class="info-payments__data-item">USDT: 102₽</div>
+                      <div class="info-payments__data-item">Баланс: 5 100.02₽</div>
+                    </div>
+                  </div>
+                  <div class="info-payments__body">
+                    <div class="form__block-title">Заказать выплату</div>
+                    <div class="info-payments__title">Кошелек USDT TRC-20</div>
+                    <div class="form__label">
+                      <textarea readonly name="" class="form__area">TRCTRCTRCD3OUR2M5IKE4XQ</textarea>
+                    </div>
+                    <div class="form__label">
+                      <input autocomplete="off" type="text" name="" placeholder="Сумма" class="form__input">
+                    </div>
+                  </div>
+                  <div class="info-payments__overal">
+                    <div class="form__caption">Комиссия: 200₽</div>
+                    <div class="form__caption">К получению: 0₽</div>
+                  </div>
+                  <div class="form__bottom">
+                    <button type="submit" class="btn">Заказать</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="payments__table">
+              <div class="adm-table adm-table--payments"><img src="img/ellipse.svg" alt="alt" class="ellipse">
+                <div class="adm-table__header">
+                  <div class="adm-table__row">
+                    <div class="adm-table__col">ID</div>
+                    <div class="adm-table__col">Сумма выплаты</div>
+                    <div class="adm-table__col">Курс USDT</div>
+                    <div class="adm-table__col">Кошелек USDT</div>
+                    <div class="adm-table__col">Статус</div>
+                    <div class="adm-table__col">дата создания</div>
+                  </div>
+                </div>
+                <div class="adm-table__body">
+                  <div class="adm-table__row">
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">ID</div>
+                      <div class="adm-table__val">1</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Сумма выплаты</div>
+                      <div class="adm-table__val">1 100₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Курс USDT</div>
+                      <div class="adm-table__val">102₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Кошелек USDT</div>
+                      <div class="adm-table__val">TRCTRCTRCD3OUR2M5IKE4XQ</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Статус</div>
+                      <div class="adm-table__val">
+                        <div class="adm-table__label adm-table__label--warning">Ожидание</div>
+                      </div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">дата создания</div>
+                      <div class="adm-table__val">10.08.2024</div>
+                    </div>
+                  </div>
+                  <div class="adm-table__row">
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">ID</div>
+                      <div class="adm-table__val">1</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Сумма выплаты</div>
+                      <div class="adm-table__val">1 100₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Курс USDT</div>
+                      <div class="adm-table__val">102₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Кошелек USDT</div>
+                      <div class="adm-table__val">TRCTRCTRCD3OUR2M5IKE4XQ</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Статус</div>
+                      <div class="adm-table__val">
+                        <div class="adm-table__label adm-table__label--danger">Ожидание</div>
+                      </div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">дата создания</div>
+                      <div class="adm-table__val">10.08.2024</div>
+                    </div>
+                  </div>
+                  <div class="adm-table__row">
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">ID</div>
+                      <div class="adm-table__val">1</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Сумма выплаты</div>
+                      <div class="adm-table__val">1 100₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Курс USDT</div>
+                      <div class="adm-table__val">102₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Кошелек USDT</div>
+                      <div class="adm-table__val">TRCTRCTRCD3OUR2M5IKE4XQ</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Статус</div>
+                      <div class="adm-table__val">
+                        <div class="adm-table__label adm-table__label--success">Выплачено</div>
+                      </div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">дата создания</div>
+                      <div class="adm-table__val">10.08.2024</div>
+                    </div>
+                  </div>
+                  <div class="adm-table__row">
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">ID</div>
+                      <div class="adm-table__val">1</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Сумма выплаты</div>
+                      <div class="adm-table__val">1 100₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Курс USDT</div>
+                      <div class="adm-table__val">102₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Кошелек USDT</div>
+                      <div class="adm-table__val">TRCTRCTRCD3OUR2M5IKE4XQ</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Статус</div>
+                      <div class="adm-table__val">
+                        <div class="adm-table__label adm-table__label--success">Выплачено</div>
+                      </div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">дата создания</div>
+                      <div class="adm-table__val">10.08.2024</div>
+                    </div>
+                  </div>
+                  <div class="adm-table__row">
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">ID</div>
+                      <div class="adm-table__val">1</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Сумма выплаты</div>
+                      <div class="adm-table__val">1 100₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Курс USDT</div>
+                      <div class="adm-table__val">102₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Кошелек USDT</div>
+                      <div class="adm-table__val">TRCTRCTRCD3OUR2M5IKE4XQ</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Статус</div>
+                      <div class="adm-table__val">
+                        <div class="adm-table__label adm-table__label--success">Выплачено</div>
+                      </div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">дата создания</div>
+                      <div class="adm-table__val">10.08.2024</div>
+                    </div>
+                  </div>
+                  <div class="adm-table__row">
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">ID</div>
+                      <div class="adm-table__val">1</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Сумма выплаты</div>
+                      <div class="adm-table__val">1 100₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Курс USDT</div>
+                      <div class="adm-table__val">102₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Кошелек USDT</div>
+                      <div class="adm-table__val">TRCTRCTRCD3OUR2M5IKE4XQ</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Статус</div>
+                      <div class="adm-table__val">
+                        <div class="adm-table__label adm-table__label--success">Выплачено</div>
+                      </div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">дата создания</div>
+                      <div class="adm-table__val">10.08.2024</div>
+                    </div>
+                  </div>
+                  <div class="adm-table__row">
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">ID</div>
+                      <div class="adm-table__val">1</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Сумма выплаты</div>
+                      <div class="adm-table__val">1 100₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Курс USDT</div>
+                      <div class="adm-table__val">102₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Кошелек USDT</div>
+                      <div class="adm-table__val">TRCTRCTRCD3OUR2M5IKE4XQ</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Статус</div>
+                      <div class="adm-table__val">
+                        <div class="adm-table__label adm-table__label--success">Выплачено</div>
+                      </div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">дата создания</div>
+                      <div class="adm-table__val">10.08.2024</div>
+                    </div>
+                  </div>
+                  <div class="adm-table__row">
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">ID</div>
+                      <div class="adm-table__val">1</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Сумма выплаты</div>
+                      <div class="adm-table__val">1 100₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Курс USDT</div>
+                      <div class="adm-table__val">102₽</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Кошелек USDT</div>
+                      <div class="adm-table__val">TRCTRCTRCD3OUR2M5IKE4XQ</div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">Статус</div>
+                      <div class="adm-table__val">
+                        <div class="adm-table__label adm-table__label--success">Выплачено</div>
+                      </div>
+                    </div>
+                    <div class="adm-table__col">
+                      <div class="adm-table__caption">дата создания</div>
+                      <div class="adm-table__val">10.08.2024</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                <div class="pagination"><a href="#" class="pagination__arrow pagination__arrow--prev">
+                        <svg class="icon icon-page-prev ">
+                          <use xlink:href="img/icons-svg/svg-sprite.svg#page-prev"></use>
+                        </svg></a>
+                  <ul class="pagination__list">
+                    <li class="pagination__item"><a href="#" class="pagination__link active">1</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">...</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">15</a></li>
+                  </ul><a href="#" class="pagination__arrow pagination__arrow--next">
+                        <svg class="icon icon-page-next ">
+                          <use xlink:href="img/icons-svg/svg-sprite.svg#page-next"></use>
+                        </svg></a>
+                </div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__copyright">Pay2Game 2024</div>
+        <div class="footer__version">Version 1.0</div>
+      </footer>
+    </main>
+    
+    
+    <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
+    
+    
+    <script src="js/common.min.js"></script>
+  </body>
+</html>
