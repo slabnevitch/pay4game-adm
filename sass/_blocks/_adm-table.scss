@@ -14,6 +14,10 @@
 	@include max-screen($sm){
 		display: none;
 	}
+	.adm-table__row{
+		align-items: center;
+
+	}
 }
 .adm-table__row{
 	display: flex;
@@ -62,6 +66,13 @@
 	@include max-screen($sm){
 		text-align: right;
 	}
+}
+.adm-table__labels{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: rem(8);
 }
 .adm-table__label {
 	min-height: rem(27);

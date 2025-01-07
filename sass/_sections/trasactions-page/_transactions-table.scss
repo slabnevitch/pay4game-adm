@@ -1,0 +1,128 @@
+/*--------------------transactions-table----------------------*/
+.transactions__table {
+	margin-right: rem(-24);
+	overflow-x: auto;
+
+	@include max-screen($sm){
+		margin-right: 0;
+	}
+	// .adm-table__body{
+	// 	.adm-table__col{
+	// 		&:nth-child(4){
+	// 			@include min-screen($sm){
+	// 				@include dots-family();
+					
+	// 			}
+
+	// 			.adm-table__val{
+	// 				@include max-screen($sm){
+	// 					word-break: break-word;
+	// 				}
+	// 				@include min-screen($sm){
+	// 					@include dots-family();
+						
+	// 				}
+	// 			}
+
+	// 		}
+	// 	}
+	// }
+
+	.adm-table--transactions{
+		// overflow-x: auto;
+		// min-width: rem(2248);
+	}
+	.adm-table__header{
+		.adm-table__row{
+			align-items: stretch;
+
+		}
+	}
+	.adm-table__row{
+		@include min-screen($sm){
+			padding: 0;
+			border-bottom: none;
+			
+		}
+	}
+	.adm-table__col{
+		@include min-screen($sm){
+			
+			padding: rem(17) 0;
+			border-bottom: rem(1) solid $accent;
+		}
+
+		&:first-child{
+			@include min-screen($sm){
+				flex: 0 0 rem(120);
+				
+			}
+		}
+
+		&:nth-child(2){
+			@include min-screen($sm){
+				flex: 0 0 rem(200);
+				
+			}
+			
+		}
+		&:nth-child(3){
+			@include min-screen($sm){
+				flex: 0 0 rem(236);
+				
+			}
+			
+		}
+		&:nth-child(4){
+			@include min-screen($sm){
+				flex: 0 0 rem(270);
+				
+			}
+
+		}
+		&:nth-child(5){
+			@include min-screen($sm){
+				flex: 0 0 rem(270);
+				
+			}
+		}
+		&:nth-child(6){
+			@include min-screen($sm){
+				flex: 0 0 rem(208);
+				
+			}
+		}
+		&:nth-child(7){
+			@include min-screen($sm){
+				flex: 0 0 rem(208);
+				
+			}
+		}
+		&:nth-child(8){
+			@include min-screen($sm){
+				flex: 0 0 rem(270);
+				
+			}
+		}
+		&:nth-child(9){
+			@include min-screen($sm){
+				flex: 0 0 rem(270);
+				
+			}
+		}
+		&:nth-child(10){
+			@include min-screen($sm){
+				flex: 0 0 rem(270);
+				
+			}
+		}
+		&:nth-child(11){
+			@include min-screen($sm){
+				flex: 0 0 rem(350);
+				
+			}
+		}
+
+	}
+}
+/*--------------------END transactions-table----------------------*/ 

@@ -1,0 +1,41 @@
+.transactions__table
+	- var cols = ['ID', 'Сумма заказа', 'Сумма за вычетом комиссии', 'E-mail плательщика', 'Номер/ карты плательщика', 'IP покупателя', 'Статус', 'Статус получен', 'UUUD', 'Дата создания', ''];
+	
+	- var body1 = ['1', '4690₽', '102₽', 'email@example', '8799', '123.456.78.90'];
+	- var body2 = ['2024-12-12 22:06:00', 'TRCTRCTRCD3OUR2M5IKE4XQ', '2024-12-12 22:06:00'];
+	
+	.adm-table.adm-table--transactions
+		.adm-table__header
+			.adm-table__row
+				each col in cols
+					.adm-table__col= col
+		
+		.adm-table__body
+			- for (var n=0; n < 8; n++)
+				.adm-table__row
+					each col, i in body1
+						.adm-table__col
+							.adm-table__caption= cols[i]
+							.adm-table__val= col
+
+					.adm-table__col
+						.adm-table__caption Статус
+						.adm-table__val
+							.adm-table__labels
+								.adm-table__label.adm-table__label--success Успех
+								.adm-table__label.adm-table__label--danger Refund
+
+					each col, i in body2
+						.adm-table__col
+							.adm-table__caption= cols[i]
+							.adm-table__val= col
+
+					.adm-table__col
+						.adm-table__caption Статус
+						.adm-table__val
+							.adm-table__labels
+								button.btn.btn-mini(type="button") Повторить вебхук
+								button.btn.btn-mini.btn-danger(type="button") Возврат
+
+
++pagination([1, 2, 3, 4, '...', 15], activeIndex= 0,  arrowClass = '', iconPrev = 'page-prev', iconNext = 'page-next', textPrev='', textNext='')

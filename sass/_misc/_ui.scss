@@ -38,7 +38,7 @@ h2{
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: rem(55);
+  min-height: rem(55);
   flex-shrink: 0;
   border: none;
   color: #0B0D0B;
@@ -76,6 +76,20 @@ h2{
     background-color: transparent;
     color: #fff;
     @include vertical-grad(#213953, #1B2D41);
+  }
+  &-mini{
+    min-height: rem(27);
+    padding: rem(2) rem(24) rem(6) rem(24);
+  }
+  &-danger{
+    background-color: #fff;
+    background-color: #F90000;
+
+    @media (any-hover: hover) { //только для устройств с ховером
+      &:hover{
+          background-color: darken(#F90000, 5%);
+      }
+    }
   }
 
 //   &:active{

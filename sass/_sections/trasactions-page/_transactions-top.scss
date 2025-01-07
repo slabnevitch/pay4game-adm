@@ -31,11 +31,14 @@
 .form-transactions__row--bottom {
 	@include flex-cols-gap(16, 16, 2, ($md: 3, $sm: 2, $xs: 1), 'form-transactions__col', 1);
 }
-.form__custom-policy {}
-.form__custom {}
-.form__check {}
-.form__custom-chek {}
-.icon {}
-.icon-check {}
-.form__policy {}
+
+.transactions__drag{
+	@extend .form__caption;
+	margin-top: rem(21);
+	margin-bottom: rem(48);
+
+	@include max-screen($sm){
+		display: none;
+	}
+}
 /*--------------------END transactions-top----------------------*/ 
