@@ -188,8 +188,8 @@ h2{
   }
 
   .pagination__link{
-    aspect-ratio: 40/37;
-    height: auto;
+    width: rem(40);
+    height: rem(37);
     text-decoration: none;
     border-radius: rem(4);
     font-family: $light;
@@ -197,7 +197,7 @@ h2{
   .pagination__arrow{
     flex-shrink: 0;
     width: rem(40);
-    aspect-ratio: 40/37;
+    height: rem(37);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,6 +211,7 @@ h2{
 }
 .fstdropdown{
   cursor: default;
+  outline: none;
 
   @media (any-hover: hover) { //только для устройств с ховером
       cursor: pointer;
@@ -225,6 +226,8 @@ h2{
 }
 .fstdiv.open{
   z-index: 10;
+}
+.fstdiv.open{
 }
 .fstdropdown.open:hover{
   outline: none;
