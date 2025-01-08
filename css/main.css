@@ -442,6 +442,7 @@ body {
   padding: 0;
   background-color: transparent;
   border: none;
+  outline: none;
   width: 2.75rem;
   height: 2.75rem;
   display: -ms-flexbox;
@@ -924,6 +925,7 @@ textarea {
   padding: 0;
   background-color: transparent;
   border: none;
+  outline: none;
   position: absolute;
   bottom: 0.75rem;
   right: 1.25rem;
@@ -1128,6 +1130,7 @@ h2 {
   padding: 0;
   background-color: transparent;
   border: none;
+  outline: none;
   color: #fff;
   text-decoration: none;
 }
@@ -1173,8 +1176,8 @@ h2 {
   }
 }
 .pagination .pagination__link {
-  aspect-ratio: 40/37;
-  height: auto;
+  width: 2.5rem;
+  height: 2.3125rem;
   text-decoration: none;
   border-radius: 0.25rem;
   font-family: "RobotoLight", sans-serif;
@@ -1183,7 +1186,7 @@ h2 {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 2.5rem;
-  aspect-ratio: 40/37;
+  height: 2.3125rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -1201,6 +1204,7 @@ h2 {
 
 .fstdropdown {
   cursor: default;
+  outline: none;
 }
 @media (any-hover: hover) {
   .fstdropdown {
@@ -1463,6 +1467,7 @@ h2 {
   padding: 0;
   background-color: transparent;
   border: none;
+  outline: none;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
