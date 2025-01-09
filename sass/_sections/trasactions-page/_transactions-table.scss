@@ -63,7 +63,7 @@
 	.adm-table__col{
 		@include min-screen($sm){
 			
-			padding: rem(17) 0;
+			padding: rem(17) rem(5);
 			border-bottom: rem(1) solid $accent;
 		}
 
