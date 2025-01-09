@@ -392,6 +392,11 @@ body {
   background-color: #051930;
   transition: all 0.2s;
 }
+@supports (height: 100svh) {
+  .sidebar {
+    height: 100svh;
+  }
+}
 @media only screen and (max-width: 61.9375em) {
   .sidebar-expanded .sidebar {
     width: 18.75rem;
@@ -1355,6 +1360,11 @@ h2 {
     justify-content: flex-start;
   }
 }
+@media only screen and (max-width: 20em) {
+  .adm-table__labels .btn {
+    font-size: 0.875rem;
+  }
+}
 
 .adm-table__label {
   min-height: 1.6875rem;
@@ -1918,7 +1928,6 @@ h2 {
 
 .transactions__table {
   margin-right: -1.5rem;
-  overflow-x: auto;
 }
 @media only screen and (max-width: 47.99875em) {
   .transactions__table {
@@ -1926,6 +1935,9 @@ h2 {
   }
 }
 @media only screen and (min-width: 47.99875em) {
+  .transactions__table {
+    overflow-x: auto;
+  }
   .transactions__table .adm-table--transactions .ellipse {
     display: none;
   }
