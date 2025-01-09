@@ -7,10 +7,14 @@
 }
 .transactions__table {
 	margin-right: rem(-24);
-	overflow-x: auto;
+	// overflow-x: hidden;
 
 	@include max-screen($sm){
 		margin-right: 0;
+	}
+	@include min-screen($sm){
+		overflow-x: auto;
+		
 	}
 	// .adm-table__body{
 	// 	.adm-table__col{

@@ -84,6 +84,12 @@
 	@include max-screen($sm){
 		justify-content: flex-start;
 	}
+	.btn{
+		
+		@include max-screen($mins){
+			font-size: rem(14);
+		}
+	}
 }
 .adm-table__label {
 	min-height: rem(27);
@@ -94,6 +100,7 @@
 	font-family: $light;
 	color: #292824;
 	border-radius: rem(40);
+
 }
 .adm-table__label--success {
 	background-color: $accent;

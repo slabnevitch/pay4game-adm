@@ -59,6 +59,10 @@ body{
 	background-color: $acc-dark;
 	transition: all .2s;
 
+	@supports(height: 100svh){
+		height: 100svh;
+	}
+
 
 	.sidebar-expanded &{
 		@include max-screen($md){
