@@ -1952,7 +1952,7 @@ h2 {
     border-bottom: none;
   }
   .transactions__table .adm-table__col {
-    padding: 1.0625rem 0;
+    padding: 1.0625rem 0.3125rem;
     border-bottom: 0.0625rem solid #73C128;
   }
   .transactions__table .adm-table__col:first-child {
